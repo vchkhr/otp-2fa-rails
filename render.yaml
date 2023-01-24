@@ -1,7 +1,7 @@
 databases:
   - name: devise-2fa
-    databaseName: devise-2fa
-    user: devise-2fa
+    databaseName: devise2fa
+    user: devise2fa
     plan: free
 
 
