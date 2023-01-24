@@ -1,9 +1,10 @@
-<h1>Welcome</h1>
+<h1>Welcome, <%= current_user.email %></h1>
 
 <%= link_to "Articles", articles_path %>
+<%= link_to "My Profile", 'users/edit' %>
 
 
-<h2>Stimulus Check</h2>
+<%# <h2>Stimulus Check</h2>
 
 <div data-controller="hello">
   <input data-hello-target="name" type="text">
@@ -14,4 +15,4 @@
 
   <span data-hello-target="output">
   </span>
-</div>
+</div> %>
