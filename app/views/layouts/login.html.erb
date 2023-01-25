@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Devise OTP/U2F Demo</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  </head>
+
+  <body class="login">
+    <p class="alert alert-notice"><%= notice %></p>
+    <p class="alert alert-danger"><%= alert %></p>
+
+    <%= yield %>
+
+    <p></p>
+  </body>
+</html>

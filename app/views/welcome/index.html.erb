@@ -1,18 +1,5 @@
 <h1>Welcome, <%= current_user.email %></h1>
 
 <%= link_to "Articles", articles_path %>
-<%= link_to "My Profile", 'users/edit' %>
-
-
-<%# <h2>Stimulus Check</h2>
-
-<div data-controller="hello">
-  <input data-hello-target="name" type="text">
-
-  <button data-action="click->hello#greet">
-    Greet
-  </button>
-
-  <span data-hello-target="output">
-  </span>
-</div> %>
+<%= link_to "My Profile", "users/edit" %>
+<%= link_to 'Logout', destroy_user_session_path %>
