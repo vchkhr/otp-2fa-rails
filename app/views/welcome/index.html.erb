@@ -4,6 +4,14 @@
 <%= link_to "My Profile", 'users/edit' %>
 <%= link_to 'Logout', destroy_user_session_path %>
 
+<% if current_user.otp_required_for_login %>
+  <p>Two factor authentication is enabled.</p>
+  <%= button_to('Disable Two Factor Authentication', two_factor_settings_path, class: 'btn btn-danger', method: :delete, data: {confirm: 'Are you sure you want to disable two factor authentication?'}) %>
+<% else %>
+  <p>Two factor authentication is NOT enabled.</p>
+  <%= link_to('Enable Two Factor Authentication', new_two_factor_settings_path, class: 'btn btn-primary') %>
+<% end %>
+
 <%# <h2>Stimulus Check</h2>
 
 <div data-controller="hello">
